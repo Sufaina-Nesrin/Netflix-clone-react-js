@@ -45,7 +45,14 @@ console.log('nothing to excute')
             <div className='posters'>
             {movies.map((obj)=>{
                 return(
-                    <img onClick={()=>handleMovie(obj.id)} className={props.isSmall?'smallPoster':'poster'} src={`${imageUrl+obj.backdrop_path}`} alt="" />
+                    <>
+                    <div>
+                    <img  onClick={()=>handleMovie(obj.id)} className={props.isSmall?'smallPoster':'poster'} src={`${imageUrl+obj.backdrop_path}`} alt="" />
+                     <p className='movieName'>{obj.title}</p>
+                     </div>
+                    
+                    </>
+                   
                 )
             })}
             
